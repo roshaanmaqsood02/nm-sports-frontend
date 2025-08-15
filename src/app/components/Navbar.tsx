@@ -94,19 +94,19 @@ export default function Navbar() {
                 <div className="md:hidden bg-white shadow-lg py-4 px-4">
                   <div className="flex flex-col space-y-4">
                     <Link
-                      href="/features"
+                      href="#features"
                       className="text-gray-700 hover:text-blue-600 transition"
                     >
                       Features
                     </Link>
                     <Link
-                      href="/testimonials"
+                      href="#testimonials"
                       className="text-gray-700 hover:text-blue-600 transition"
                     >
                       Testimonials
                     </Link>
                     <Link
-                      href="/pricing"
+                      href="#pricing"
                       className="text-gray-700 hover:text-blue-600 transition"
                     >
                       Pricing

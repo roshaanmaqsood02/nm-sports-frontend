@@ -146,7 +146,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
-          <p>© {new Date().getFullYear()} SportSync. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NM Sports. All rights reserved.</p>
         </div>
       </div>
     </footer>
