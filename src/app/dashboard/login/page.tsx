@@ -4,6 +4,7 @@ import api from "../../lib/api";
 import { setToken } from "../../lib/auth";
 import { useRouter } from "next/navigation";
 import { FiMail, FiLock, FiLogIn } from "react-icons/fi";
+import Link from "next/link";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -25,10 +26,7 @@ export default function LoginPage() {
       setToken(res.data.access_token);
       router.push("/dashboard");
     } catch (err: any) {
-      setError(
-        err.response?.data?.message ||
-          "Login failed. Please check your credentials."
-      );
+      setError(err.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
     }
@@ -39,7 +37,12 @@ export default function LoginPage() {
       {/* Left Side - Branding */}
       <div className="md:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-800 p-8 text-white flex flex-col justify-between">
         <div>
-          <h1 className="text-3xl font-bold">SportsSaaS</h1>
+          <h1
+            className="text-3xl font-bold cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            NM Sports
+          </h1>
           <p className="mt-1 text-blue-200">Elevate Your Sports Management</p>
         </div>
 
@@ -81,7 +84,7 @@ export default function LoginPage() {
 
         <div className="mt-auto">
           <p className="text-blue-200 text-sm">
-            © 2023 SportsSaaS. All rights reserved.
+            &copy; 2023 NM Sports. All rights reserved.
           </p>
         </div>
       </div>
@@ -102,7 +105,7 @@ export default function LoginPage() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className=" text-gray-800">
+          <form onSubmit={handleSubmit} className="text-gray-800">
             <div className="mb-5">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -118,7 +121,7 @@ export default function LoginPage() {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 p-3 border border-gray-300 text-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                  className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
               </div>
             </div>
@@ -138,7 +141,7 @@ export default function LoginPage() {
                   value={form.password}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 p-3 border border-gray-300 text-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                  className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 />
               </div>
               <div className="mt-2 text-right">

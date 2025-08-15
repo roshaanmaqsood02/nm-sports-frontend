@@ -44,7 +44,12 @@ export default function RegisterPage() {
       {/* Left Side - Branding */}
       <div className="md:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-800 p-8 text-white flex flex-col justify-between">
         <div>
-          <h1 className="text-3xl font-bold">SportsSaaS</h1>
+          <h1
+            className="text-3xl font-bold cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            NM Sports
+          </h1>
           <p className="mt-1 text-blue-200">Elevate Your Sports Management</p>
         </div>
 
@@ -110,7 +115,7 @@ export default function RegisterPage() {
 
         <div className="mt-auto">
           <p className="text-blue-200 text-sm">
-            © 2023 SportsSaaS. All rights reserved.
+            &copy; 2023 NM Sports. All rights reserved.
           </p>
         </div>
       </div>
@@ -172,7 +177,7 @@ export default function RegisterPage() {
               </div>
               <p className="text-xs text-gray-500 mt-2">
                 This will be used in your dashboard URL (e.g.,
-                your-org-name.sportssaas.com)
+                your-org-name.nmsports.com)
               </p>
             </div>
 
