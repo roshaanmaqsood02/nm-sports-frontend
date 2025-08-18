@@ -64,7 +64,7 @@ export default function PlayersPage() {
 
   if (loading) {
     return (
-      <div className="min-h-[calc(100vh-64px)] flex items-center justify-center">
+      <div className="bg-white h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading players...</p>
@@ -95,7 +95,7 @@ export default function PlayersPage() {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-gray-800">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+        <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 p-6">
           <div className="flex items-center">
             <div className="mr-4 p-3 bg-blue-100 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -109,7 +109,7 @@ export default function PlayersPage() {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+        <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 p-6">
           <div className="flex items-center">
             <div className="mr-4 p-3 bg-green-100 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -123,7 +123,7 @@ export default function PlayersPage() {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
+        <div className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 p-6">
           <div className="flex items-center">
             <div className="mr-4 p-3 bg-purple-100 rounded-lg">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
